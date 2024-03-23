@@ -1,0 +1,38 @@
+* {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+body {
+  perspective: 1000px;
+  background-image: url(imgs/bgi.png);
+  background-size: contain;
+}
+.game {
+  width: 1200px;
+  height: 2000px;
+  margin: 100px auto;
+}
+.game ul {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.game ul li {
+  width: 350px;
+  height: 500px;
+  margin-top: 20px;
+  position: relative;
+}
+.game ul li img {
+  width: 100%;
+  height: 100%;
+  box-shadow: 5px 5px 10px #000000;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: 2s;
+  transform-style: preserve-3d;
+}
+.game ul li .p2 {
+  transform: rotateY(180deg);
+}

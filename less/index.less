@@ -1,0 +1,171 @@
+//out:../css/index.css
+//导航栏
+html {
+    scroll-behavior: smooth;
+}
+.nav{
+    width: 1220px;
+    height: 60px;
+    background-color:rgb(131, 167, 179);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    .left{
+        ul {
+                display: flex;
+        
+                li {
+                    a {
+                        display: block;
+                        color: #222121;
+                        margin-right: 10px;
+                        padding: 5px;
+                    }
+        
+                    a:hover {
+                        background-color: rgb(163, 139, 102);
+                        border-radius: 5px;
+                    }
+        
+                    .active {
+                        color: #c35f50;
+                    }
+                }
+            }
+    }
+    .right{
+        ul{
+            display: flex;
+            img{
+                display: inline-block;
+                margin-right: 10px;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+            }
+            li{
+                display: flex;
+                p{
+                    line-height: 40px;
+                    margin-right: 10px;
+                    
+                }
+                #exit{
+                    color: #646060;
+                    font-size: 14px;
+                    margin-left: 10px;
+                    cursor: pointer;
+                }
+                a{
+                    
+                    margin-right: 10px;
+                    padding: 5px;
+                    color: #646060;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+//banner
+//轮播图
+.slider{
+        position: relative;
+        .slider-wrapper {
+                width: 1220px;
+                height: 500px;
+                background-color: pink;
+                margin: 50px auto 0px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .slider-footer {
+                .toggle {
+                    button {
+                        width: 30px;
+                        height: 50px;
+                        border: none;
+                        background: rgba(63, 59, 59, 0.1);
+                        appearance: none;
+                        border-radius: 4px;
+                        color: #c35f50;
+                        cursor: pointer;
+                    }
+                    .prev {
+                        position: absolute;
+                        left: 110px;
+                        top: 50%;
+                    }
+                    .next {
+                        position: absolute;
+                        right: 110px;
+                        top: 50%;
+                    }
+                }
+                .slider-indicator {
+                    display: flex;
+                    align-items: center;
+                    position: absolute;
+                    right: 110px;
+                    bottom: 10px;
+                    li {
+                        width: 8px;
+                        height: 8px;
+                        margin: 4px;
+                        border-radius: 50%;
+                        background: #ede9e9;
+                        opacity: 0.4;
+                        cursor: pointer;
+        
+                    }
+                    .active {
+                        width: 12px;
+                        height: 12px;
+                        opacity: 1;
+                    }
+                }
+            }
+    }
+//周边产品
+.product{
+    width: 1220px;
+    height: 500px;
+    // background-color: pink;
+    margin:30px auto;
+    .head{
+        height: 50px;
+        background-color: rgb(131, 167, 179);
+        line-height: 50px;
+        padding-left: 20px;
+        font-size: 20px;
+    }
+    .pro{
+        background-color: #ffffff;
+        padding-bottom: 10px;
+      ul{
+        height: 420px;
+        padding: 10px 10px;
+        // background-color: #3d94ca;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        a{
+            display: block;
+            height: 210px;
+            width: 250px;
+            // background-color: #90d018;
+            margin-bottom:  10px; 
+            img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+        }
+      }
+    }
+}

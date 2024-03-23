@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./game.css">
+    
+</head>
+<body>
+     <div class="game">
+        <ul>
+        </ul>
+     </div>
+     <script>
+        //原始数据
+        const data = [
+            {src1:"./imgs/pic1.jpg" ,src2 : "./imgs/pic2.png"},
+            {src1:"./imgs/pic1.jpg" ,src2 : "./imgs/pic3.png"},
+            {src1:"./imgs/pic1.jpg" ,src2 : "./imgs/pic4.png"},
+            {src1:"./imgs/pic1.jpg" ,src2 : "./imgs/pic5.png"},
+            {src1:"./imgs/pic1.jpg" ,src2 : "./imgs/pic6.png"},
+            {src1:"./imgs/pic1.jpg" ,src2 : "./imgs/pic7.png"},
+            {src1:"./imgs/pic1.jpg" ,src2 : "./imgs/pic8.png"},
+            {src1:"./imgs/pic1.jpg" ,src2 : "./imgs/pic9.png"},
+            {src1:"./imgs/pic1.jpg" ,src2 : "./imgs/pic10.png"},
+        ]
+        //随机函数
+        function random(){
+            return Math.floor(Math.random()*data.length)
+        }
+        const ul = document.querySelector('ul')       
+        let timeId = 0
+        //渲染li
+        for(let i=0;i<data.length;i++){
+            let li
+            li = document.createElement('li')
+            li.innerHTML = `
+            <img src="${data[random()].src1}"  class="p1" alt="">
+            <img src="${data[random()].src2}"  class="p2" alt="" >
+            `
+            ul.appendChild(li)
+             //点击翻转卡片
+            li.addEventListener('click',function(){
+                // clearInterval(timeId)
+                // console.log(11)
+                li.querySelector('.p2').style.transform = 'rotateY(0deg)'
+                li.querySelector('.p1').style.transform = 'rotateY(-180deg)'
+                timeId = setTimeout(function(){
+                    li.querySelector('.p2').style.transform = 'rotateY(180deg)'
+                    li.querySelector('.p1').style.transform = 'rotateY(0deg)'
+                },5000)
+            })
+            }
+       
+     </script>
+</body>
+</html>

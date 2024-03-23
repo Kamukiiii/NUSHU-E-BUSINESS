@@ -1,0 +1,16 @@
+{
+  "id": "4467421",
+  "name": "女书电商",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "15838434",
+      "name": "back",
+      "font_class": "back",
+      "unicode": "e666",
+      "unicode_decimal": 58982
+    }
+  ]
+}

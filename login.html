@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>与汝同书登录注册页面</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            background-image: url(./科普页面/bgi2.jpg);
+        }
+        .a{
+            background-color: #c9c2b4;
+            opacity: 0.9;
+            width: 350px;
+            height: 500px;
+            position: relative;
+            display: flex;
+            border-radius: 10px;
+            justify-content: center;
+            align-items: center;
+            top: 100px;
+        }
+        .b{
+            width: 300px;
+            height: 450px;
+            overflow: hidden;
+        }
+        .c{
+            font: 900 40px '';
+            margin: 60px 0;
+            text-align: center;
+            /* 设置字体间距 */
+            letter-spacing: 5px;
+        }
+        .e{
+            width: 100%;
+            margin-bottom: 20px;
+            outline: none;
+            border: 0;
+            padding: 10px;
+            border-bottom: 2px solid rgb(60,60,70);
+            font: 900 16px '';
+        }
+        .f{
+            text-align: center;
+            padding: 8px;
+            font: 700 15px '';
+            width: 100px;
+            border-radius: 10px;
+            background-color: #fff;
+            cursor: pointer;
+        }
+        .g{
+            margin: 33px;
+        }
+    </style>
+</head>
+<body>
+    <div class="a">
+        <form action="">
+            <div class="b">
+            <p class="c">Login</p>
+            <div class="d">
+                <input required type="text" class="e" placeholder="用户名" name="username">
+                <input required  type="password" class="e" placeholder="密码" autocomplete="off" name="password">
+                <button class="f" type="submit">登录/注册</button>               
+            </div>
+        </form>
+
+    </div>
+    <script>
+        const form = document.querySelector('form')
+        const username = document.querySelector('[name = username]')
+        form.addEventListener('submit',function(e){
+            e.preventDefault()
+            localStorage.setItem('nvshu-name',username.value)
+            location.href = "./非遗电商项目.html"
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,259 @@
+//out:../css/shop_index.css
+html {
+    scroll-behavior: smooth;
+    position: relative;
+    
+}
+body{
+    background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+}
+.iconfont{
+    font-size: 30px !important;
+    position: absolute;
+    right: 30px;
+    color: #ce5151;
+}
+.cont{
+    width: 1200px;
+    height: 625px;
+    margin: 20px auto;
+    // background-color: pink;
+    display: flex;
+    .cont-left{
+        width: 500px;
+        height: 100%;
+        // background-color: #c4e1f1;
+        background-image: linear-gradient(to top, #feada6 0%, #f5efef 100%);
+        border: 1px solid #070606;
+        text-align: center;
+        .ctl-img{
+            width: 470px;
+            height: 362px;
+            // background-color: #fff;
+            margin: 100px 10px 0;
+           img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+           }
+        }
+    }
+    .cont-right{
+        float: right;
+        width: 545px;
+        height: 525px;
+        margin-right: 90px;
+        // background-color: #fff;
+        margin-left: 50px;
+        padding-top: 100px;
+        .title{
+            font-weight: normal;
+            color: #333;
+            margin-top: 20px;
+            margin-bottom: 35px;
+            font-weight: 700;
+            font-size: 30px;
+            text-align: left;
+        }
+        .pic{
+            display: flex;
+            border-bottom: 1px solid #D1D1D1;
+            padding-bottom: 20px;
+            .ppi{
+                font-size: 14px;
+                margin-left: 20px;
+                margin-right: 5px;
+                line-height: 14px;
+                padding-top: 15px;
+            }
+            .f-mallUnit{
+                color: #d52251;
+                font-size: 24px;
+                font-weight: bold;
+                padding-top: 5px;
+            }
+            .pcc{
+                color: #d52251;
+                font-size: 30px;
+                font-weight: bold;
+            }
+        }
+        .style{
+            margin-top:  25px;
+            border-bottom: 1px solid #D1D1D1;
+            padding-bottom: 20px;
+            p{
+                font-size: 20px;
+                color: #585858;
+            }
+            ul{
+                
+                height: 40px;
+                width: 540;
+                // background-color: rgb(70, 30, 37);
+                padding: 15px ;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin-top: 20px;
+                li{
+                    cursor: pointer;
+                    font-size: 14px;
+                    height: 30px;
+                    width: 120px;
+                    background-color: #fff;
+                    text-align: center;
+                    line-height: 30px;                   
+                    a {
+                           color: #070606;
+                        }
+                }
+                .active {
+                        height: 32px;
+                        width: 125px;
+                        border: 2px solid #952e2e;
+                        transition: all .3s;
+                        }
+            }
+
+        
+        }
+        .buttn {
+            margin-top: 30px;
+            float: left;
+            width: 160px;
+            height: 42px;
+            line-height: 42px;
+            border: 1px solid #d52251;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            color: #d52251;
+            
+                }
+        
+    }
+        
+    
+}
+//用户评论板块
+.wrapper{
+    margin-top: 30px;
+    min-width: 400px;
+    max-width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    textarea{
+        outline: none;
+        border-color: transparent;
+        resize: none;
+        background: #f5f5f5;
+        border-radius: 4px;
+        flex: 1;
+        padding: 10px;
+        transition: all 0.5s;
+        height: 30px;
+        
+    }
+    textarea:focus {
+        border-color: #e4e4e4;
+        background: #fff;
+        height: 50px;
+    }
+    button{
+        background-image: linear-gradient(to bottom, #feada6 100%, #f5efef 14px);
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        margin-left: 10px;
+        width: 70px;
+        cursor: pointer;
+    }
+    .total{
+        margin-right: 80px;
+        color: #999;
+        opacity: 0;
+        transition: all 0.5s
+    }
+
+}
+.contentlist{
+    width: 100%;
+    height: 100%;
+    // background-color: pink;
+    margin-bottom: 15px;
+  li{
+    position: relative;
+    margin-top: 20px;
+    .info {
+            width: 200px;
+            height: 50px;
+            // background-color: #721010;
+            display: flex;
+    
+            img {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+            }
+    
+            span {
+                margin-left: 10px;
+                font-size: 14px;
+            }
+    
+            p {
+                font-size: 12px;
+                margin-left: -30px;
+                margin-top: 20px;
+                color: #585858;
+            }
+        }
+  }
+    .content{
+        margin-left: 50px;
+        font-size: 14px;
+    }
+    .the_del{
+        position: absolute;
+        right: 8px;
+        top: 4px;
+        cursor: pointer;
+        font-size: 12px;       
+    }
+}
+
+//免密支付模块
+.pay{
+    width: 600px;
+    height: 400px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    display: none;
+    .logo{
+        width: 200px;
+        height: 200px;
+        margin: 50px auto;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .payfor{
+        font-size: 20px;
+        margin-top: 50px;
+    }
+    .close{
+        position: absolute;
+        right: 10px;
+        top: 5px;
+        cursor: pointer;
+    }
+}
