@@ -1,0 +1,107 @@
+//out:../css/chat.css
+body{
+    background: url(../uploads/bgi.png) no-repeat;
+    background-size: cover;
+}
+.chat{
+    margin: 100px auto;
+    background-color: #fff;
+    width: 600px;
+    height: 650px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    flex-direction: column;
+    
+    .service{
+        width: 600px;
+        height: 50px;
+        // background-color: pink;
+        border-bottom: 1px solid #d1d1d1;
+        line-height: 50px;
+        padding-left: 20px;
+    }
+    .show{
+        flex: 1;
+        ul{
+            display: flex;
+            flex-direction: column;
+            li{
+                width: 600px;
+                height: 100px;
+                // background-color: pink;\
+                margin-top: 20px;
+                position: relative;
+                img {
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        margin-top: 10px;
+                    }
+                .shape {
+                        // width: 200px;
+                        border-radius: 8px;
+                        background-color: #faf8f4;
+                        border: 1px solid #e6d9b3;
+                        position: relative;
+                        margin-left: 20px;
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            top: 50%;
+                            transform: translate(-50%, -50%) rotate(45deg);
+                            width: 15px;
+                            height: 15px;
+                            background: #faf8f4;
+                            border: 1px solid #e6d9b3;
+                             border-style: none none solid solid
+                            }
+                        }
+                p{
+                    font-size: 14px;
+                    margin-top: 15px;
+                    margin-left: 15px;
+                    margin-right: 10px;
+                }
+            }
+            .s{
+                display: flex;
+            }
+            .u{
+                .s{
+                    transform: rotate(180deg);
+                    img{
+                        transform: rotate(-180deg);
+                    }
+                    p{
+                        transform: rotate(-180deg);
+                        margin-top: 15px;
+                        margin-left: 15px;
+                        margin-right: 10px;
+                    }
+                }
+            }
+            }
+        }
+   .content{
+        position: relative;
+        textarea {
+            border: none;
+            outline: none;
+            border: 1px solid #d1d1d1;
+            width: 599px;
+            height: 100px;
+            font-size: 16px;
+        }
+        button{
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            width: 50px;
+            height: 30px;
+            background-color: #92f4d0;
+            border: none;
+            border-radius: 10px;
+        }
+
+   }
+}

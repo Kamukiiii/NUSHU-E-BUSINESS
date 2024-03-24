@@ -1,0 +1,99 @@
+body {
+  background: url(../uploads/bgi.png) no-repeat;
+  background-size: cover;
+}
+.chat {
+  margin: 100px auto;
+  background-color: #fff;
+  width: 600px;
+  height: 650px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  display: flex;
+  flex-direction: column;
+}
+.chat .service {
+  width: 600px;
+  height: 50px;
+  border-bottom: 1px solid #d1d1d1;
+  line-height: 50px;
+  padding-left: 20px;
+}
+.chat .show {
+  flex: 1;
+}
+.chat .show ul {
+  display: flex;
+  flex-direction: column;
+}
+.chat .show ul li {
+  width: 600px;
+  height: 100px;
+  margin-top: 20px;
+  position: relative;
+}
+.chat .show ul li img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-top: 10px;
+}
+.chat .show ul li .shape {
+  border-radius: 8px;
+  background-color: #faf8f4;
+  border: 1px solid #e6d9b3;
+  position: relative;
+  margin-left: 20px;
+}
+.chat .show ul li .shape::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 15px;
+  height: 15px;
+  background: #faf8f4;
+  border: 1px solid #e6d9b3;
+  border-style: none none solid solid;
+}
+.chat .show ul li p {
+  font-size: 14px;
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-right: 10px;
+}
+.chat .show ul .s {
+  display: flex;
+}
+.chat .show ul .u .s {
+  transform: rotate(180deg);
+}
+.chat .show ul .u .s img {
+  transform: rotate(-180deg);
+}
+.chat .show ul .u .s p {
+  transform: rotate(-180deg);
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-right: 10px;
+}
+.chat .content {
+  position: relative;
+}
+.chat .content textarea {
+  border: none;
+  outline: none;
+  border: 1px solid #d1d1d1;
+  width: 599px;
+  height: 100px;
+  font-size: 16px;
+}
+.chat .content button {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  width: 50px;
+  height: 30px;
+  background-color: #92f4d0;
+  border: none;
+  border-radius: 10px;
+}
