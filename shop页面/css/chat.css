@@ -28,7 +28,7 @@ body {
 .chat .show ul li {
   width: 600px;
   height: 100px;
-  margin-top: 20px;
+  margin-top: 10px;
   position: relative;
 }
 .chat .show ul li img {
