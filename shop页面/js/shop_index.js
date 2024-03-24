@@ -166,3 +166,11 @@ else if (r == 8) {
   img.src = "./uploads/金属贴.jpg"
 }
 
+//边栏-定制
+const custom = document.querySelector('.custom')
+custom.addEventListener('mouseenter',function(){
+  custom.style.right = "0px"
+})
+custom.addEventListener('mouseleave', function () {
+  custom.style.right = "-40px"
+})

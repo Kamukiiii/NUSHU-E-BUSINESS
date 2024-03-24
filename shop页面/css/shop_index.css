@@ -233,3 +233,30 @@ body {
   top: 5px;
   cursor: pointer;
 }
+.custom {
+  position: absolute;
+  top: 50%;
+  right: -40px;
+  transform: translate(0, -50%);
+  writing-mode: vertical-lr;
+  background-color: #fff;
+  border-radius: 10px 0 0 10px;
+  width: 30px;
+  height: 90px;
+  text-align: center;
+  padding-left: 10px;
+  transition: 0.5s;
+}
+.custom a {
+  font-size: 14px;
+  font-weight: 600;
+  color: #060606;
+}
+.custom .icon-left {
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  transform: translate(0, -50%);
+  font-size: 20px !important;
+  cursor: pointer;
+}
