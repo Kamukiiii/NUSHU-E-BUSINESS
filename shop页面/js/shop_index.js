@@ -42,11 +42,13 @@ tx.addEventListener('input',function(){
 const list = document.querySelector('.contentlist ul')
 const textarea = document.querySelector('textarea')
 const btn = document.querySelector('button')
+
 btn.addEventListener('click',function(){
   if (textarea.value.length == 0){
     alert('您还没有输入内容')
     return 
   }
+  // console.log(value)
   let newli = document.createElement('li')
   list.insertBefore(newli, list.children[0])
   newli.innerHTML = `
@@ -58,6 +60,7 @@ btn.addEventListener('click',function(){
                   <div class="content">${textarea.value}</div>
                   <div class="the_del">X</div>
                   `
+
   textarea.value = ''
   total.innerHTML = '0/200字'
 
