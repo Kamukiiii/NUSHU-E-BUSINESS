@@ -1,24 +1,112 @@
-//点击样式更换图片
-//初始数据
-let Data = [
-  { src: "./uploads/nvshu纹身贴1.jpg" },
-  { src: "./uploads/nvshu纹身贴2.jpg" },
-  { src: "./uploads/nvshu纹身贴3.jpg" },
-  { src: "./uploads/nvshu纹身贴4.jpg" },
-]
 
-//事件委托：委托给ul
-//取出ul
 const ul = document.querySelector('.style ul')
 const img = document.querySelector('.cont .cont-left .ctl-img img')
+let Data = []
+let r = window.location.search.substr(1).substring(1).split("=")[1]
+const span = document.querySelector('.title span')
+const pcc = document.querySelector('.pcc')
+//定义一个数组对象存放数据
+const product_arr = [
+  { goods_name: '女书定制团扇', goods_price: '70', Data },
+  { goods_name: '古风明信片', goods_price: '2', Data },
+  { goods_name: '女书挂历', goods_price: '70', Data },
+  { goods_name: 'DIY书签', goods_price: '4', Data },
+  { goods_name: '女书明信片', goods_price: '8', Data },
+  { goods_name: '女书钥匙扣', goods_price: '15', Data },
+  { goods_name: '女书纹身贴（一个装）', goods_price: '1.9', Data },
+  { goods_name: '女书金属贴（五个装）', goods_price: '24', Data },
+  { goods_name: '女书书法作品', goods_price: '45', Data },
+  { goods_name: '女书古风扇', goods_price: '10', Data },
+  { goods_name: '女书宣纸', goods_price: '2', Data },
+  { goods_name: '女书印章', goods_price: '5', Data },
+]
+span.innerHTML = product_arr[r - 1].goods_name
+pcc.innerHTML = product_arr[r - 1].goods_price
+if (r == 1) {
+  img.src = "./uploads/团扇.jpg"
+  Data = [
+    { src: "./uploads/团扇.jpg" },
+    { src: "./uploads/团扇1.jpg" },
+    { src: "./uploads/团扇2.jpg" },
+    { src: "./uploads/团扇3.jpg" },
+  ]
+}
+else if (r == 2) {
+  img.src = "./uploads/蝴蝶明信片.jpg"
+}
+else if (r == 3) {
+  img.src = "./uploads/挂历.jpg"
+}
+else if (r == 4) {
+  img.src = "./uploads/书签.jpg"
+}
+else if (r == 5) {
+  img.src = "./uploads/明信片.jpg"
+}
+else if (r == 6) {
+  img.src = "./uploads/钥匙扣.jpg"
+}
+else if (r == 7) {
+  img.src = "./uploads/nvshu纹身贴1.jpg"
+  Data = [
+    { src: "./uploads/nvshu纹身贴1.jpg" },
+    { src: "./uploads/nvshu纹身贴2.jpg" },
+    { src: "./uploads/nvshu纹身贴3.jpg" },
+    { src: "./uploads/nvshu纹身贴4.jpg" },
+  ]
+}
+else if (r == 8) {
+  img.src = "./uploads/金属贴.jpg"
+}
+else if (r == 9) {
+  img.src = "./uploads/书法1.jpg"
+  Data = [
+    { src: "./uploads/书法1.jpg" },
+    { src: "./uploads/书法2.jpg" },
+    { src: "./uploads/书法3.jpg" },
+   
+  ]
+}
+else if (r == 10) {
+  img.src = "./uploads/女书扇子1.png"
+  Data = [
+    { src: "./uploads/女书扇子1.png" },
+    { src: "./uploads/女书扇子2.jpg" },
+    { src: "./uploads/女书扇子3.png" },
+  ]
+}
+else if (r == 11) {
+  img.src = "./uploads/女书宣纸.jpg"
+}
+else if (r == 12) {
+  img.src = "./uploads/女书印章.jpg"
+}
+
+const users = [
+  { pic: "./用户头像/user1.jpg" ,name:'MonkeyHe'},
+  { pic: "./用户头像/user2.jpg", name:'长白山树神'},
+  { pic: "./用户头像/user3.jpg", name:'亮金金' },
+  { pic: "./用户头像/user4.jpg",name:'亦一' },
+ 
+]
+
+//渲染样式
+for(let i=0;i<Data.length;i++){
+  const newli = document.createElement('li')
+  newli.innerHTML = `
+     <li><a href="javascript:;" data-id="${i}">样式${i+1}</a></li>
+  `
+  ul.append(newli)
+}
+// console.log(Data.length)
 ul.addEventListener('click',function(e){
   if(e.target.tagName === 'A'){
     // 加上active:先移除所有active,再添加active
-    document.querySelector('.style .active').classList.remove('active')
     e.target.parentNode.classList.add('active')
+    document.querySelector('.style .active').classList.remove('active')
     //点击样式，同时更换左边图片
     const id = e.target.dataset.id
-    console.log(Data[id].src)
+    // console.log(Data[id].src)
     img.src = Data[id].src   
   }
 })
@@ -44,6 +132,8 @@ const textarea = document.querySelector('textarea')
 const btn = document.querySelector('button')
 
 btn.addEventListener('click',function(){
+  let random = Math.floor(Math.random() * 4)
+  console.log(random)
   if (textarea.value.length == 0){
     alert('您还没有输入内容')
     return 
@@ -53,8 +143,8 @@ btn.addEventListener('click',function(){
   list.insertBefore(newli, list.children[0])
   newli.innerHTML = `
                   <div class="info">
-                    <img src="./用户头像/user1.jpg" alt="">
-                    <span>${user_name}</span>
+                    <img src=${users[random].pic} alt="">
+                    <span>${users[random].name}</span>
                     <p>发布于${new Date().toLocaleString()}</p>
                   </div>
                   <div class="content">${textarea.value}</div>
@@ -103,71 +193,6 @@ close.addEventListener('click', function () {
   payfor.innerHTML = '免密支付中...'
 })
 
-//跳转到购物界面
-//获取url中的id
-let r = window.location.search.substr(1).substring(1).split("=")[1]
-const span = document.querySelector('.title span')
-const pcc = document.querySelector('.pcc')
-//定义一个数组对象存放数据
-const product_arr = [
-  {goods_name:'女书古风扇',goods_price:'30',Data},
-  {goods_name:'女书耳坠',goods_price:'25',Data},
-  {goods_name:'女书手机壳',goods_price:'35',Data},
-  {goods_name:'女书挎包',goods_price:'35',Data},
-  {goods_name:'女书明信片',goods_price:'8',Data},
-  {goods_name:'女书钥匙扣',goods_price:'15',Data},
-  {goods_name:'女书文身贴',goods_price:'18',Data},
-  {goods_name:'女书金属贴',goods_price:'24',Data},
-]
-span.innerHTML = product_arr[r - 1].goods_name
-pcc.innerHTML = product_arr[r - 1].goods_price
-if(r==1){
-  img.src = "./uploads/扇子1.jpg"
-  Data = [
-    { src: "./uploads/扇子1.jpg" },
-    { src: "./uploads/扇子2.jpg" },
-    { src: "./uploads/扇子3.jpg" },
-    { src: "./uploads/扇子4.jpg" },
-  ]
-}
-else if(r==2){
-  img.src = "./uploads/耳坠2.jpg"
-  Data = [
-    { src: "./uploads/耳坠2.jpg" },
-    { src: "./uploads/耳坠3.jpg" },
-    { src: "./uploads/耳坠4.jpg" },
-    { src: "./uploads/耳坠5.jpg" },
-  ]
-}
-else if(r==3){
-  ul.style.display = 'none'
-  img.src = "./uploads/手机壳.jpg"
-}
-else if(r==4){
-  ul.style.display = 'none'
-  img.src = "./uploads/帆布包.jpg"
-}
-else if(r==5){
-  ul.style.display = 'none'
-  img.src = "./uploads/明信片.jpg"
-}
-else if(r==6){
-  ul.style.display = 'none'
-  img.src = "./uploads/钥匙扣.jpg"
-}
-else if (r == 7) {
-  img.src = "./uploads/nvshu纹身贴1.jpg"
-  Data = [
-    { src: "./uploads/nvshu纹身贴1.jpg" },
-    { src: "./uploads/nvshu纹身贴2.jpg" },
-    { src: "./uploads/nvshu纹身贴3.jpg" },
-    { src: "./uploads/nvshu纹身贴4.jpg" },
-  ]
-}
-else if (r == 8) {
-  ul.style.display = 'none'
-  img.src = "./uploads/金属贴.jpg"
-}
 
 //边栏-定制
 const custom = document.querySelector('.custom')

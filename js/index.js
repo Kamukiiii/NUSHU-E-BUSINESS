@@ -47,13 +47,17 @@ goods.addEventListener('click', function () {
 //产品渲染
 let proData = [
     { src:"image/uploads/扇子.jpg"},
-    { src:"image/uploads/耳坠1.jpg"},
-    { src:"image/uploads/手机壳.jpg"},
-    { src:"image/uploads/帆布包2.jpg"},
+    { src:"image/uploads/蝴蝶明信片.jpg"},
+    { src:"image/uploads/挂历.jpg"},
+    { src:"image/uploads/DIY书签.jpg"},
     { src:"image/uploads/明信片.jpg"},
     { src:"image/uploads/钥匙扣.jpg"},
     { src:"image/uploads/nvshu纹身贴6.jpg"},
     { src:"image/uploads/金属贴.jpg"},
+    { src:"image/uploads/书法作品.jpg"},
+    { src:"image/uploads/普通扇子.jpg"},
+    { src:"image/uploads/宣纸.jpg"},
+    { src:"image/uploads/女书印章.jpg"},
     
 ]
 const ul = document.querySelector('.product .pro ul')

@@ -13,6 +13,7 @@ setTimeout(function(){
 const tx = document.querySelector('#tx')
 const ul = document.querySelector('ul')
 const btn = document.querySelector('button')
+
 btn.addEventListener('click', function () {
     if (tx.value.length == 0) {
         alert('您还没有输入内容')
